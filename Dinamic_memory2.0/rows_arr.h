@@ -75,7 +75,7 @@ template<typename T> void Add_rows(T**& arr, int& rows, int cols)
 	}
 }
 
-template<typename T> void pop_rows_front(T**& arr, int& rows, int cols)
+template<typename T> void pop_rows_front(T**& arr, int& rows)
 {
 	rows -= 1;
 	T** buffer = new T * [rows];
@@ -90,7 +90,7 @@ template<typename T> void pop_rows_front(T**& arr, int& rows, int cols)
 	delete[] arr;
 	arr = buffer;
 }
-template<typename T> void pop_rows_back(T**& arr, int& rows, int cols)
+template<typename T> void pop_rows_back(T**& arr, int& rows)
 {
 	rows -= 1;
 	T** buffer = new T * [rows];
@@ -105,7 +105,7 @@ template<typename T> void pop_rows_back(T**& arr, int& rows, int cols)
 	delete[] arr;
 	arr = buffer;
 }
-template<typename T> void erase_rows(T**& arr, int& rows, int cols)
+template<typename T> void erase_rows(T**& arr, int& rows)
 {
 	int index;
 	cout << "Введите какую строку удалить: "; cin >> index;
@@ -126,7 +126,7 @@ template<typename T> void erase_rows(T**& arr, int& rows, int cols)
 	delete[] arr;
 	arr = buffer;
 }
-template<typename T> void Delete_rows(T**& arr, int& rows, int cols)
+template<typename T> void Delete_rows(T**& arr, int& rows)
 {
 	int choice;
 	cout << "Выберите какую строку удалить." << endl;
@@ -137,13 +137,13 @@ template<typename T> void Delete_rows(T**& arr, int& rows, int cols)
 	switch (choice)
 	{
 	case 1:
-		pop_rows_front(arr, rows, cols);
+		pop_rows_front(arr, rows);
 		break;
 	case 2:
-		pop_rows_back(arr, rows, cols);
+		pop_rows_back(arr, rows);
 		break;
 	case 3:
-		erase_rows(arr, rows, cols);
+		erase_rows(arr, rows);
 	}
 }
 
@@ -158,6 +158,6 @@ template<typename T> void work_rows(T**& arr, int& rows, int cols) {
 		Add_rows(arr, rows, cols);
 		break;
 	case 2:
-		Delete_rows(arr, rows, cols);
+		Delete_rows(arr, rows);
 	}
 }
