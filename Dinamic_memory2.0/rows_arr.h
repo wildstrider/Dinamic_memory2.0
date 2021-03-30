@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 using namespace std;
 
@@ -56,10 +56,10 @@ template<typename T> void insert_rows(T**& arr, int& rows, int cols, int index)
 template<typename T> void Add_rows(T**& arr, int& rows, int cols)
 {
 	int choice, index;
-	cout << "Âûáåðèòå êóäà äîáàâèòü ñòðîêó." << endl;
-	cout << "1 - Â íà÷àëî"
-		"\n2 - Â êîíåö"
-		"\n3 - ïî èíäåêñó" << endl;
+	cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ ÐºÑƒÐ´Ð° Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÑƒ." << endl;
+	cout << "1 - Ð’ Ð½Ð°Ñ‡Ð°Ð»Ð¾"
+		"\n2 - Ð’ ÐºÐ¾Ð½ÐµÑ†"
+		"\n3 - Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ" << endl;
 	cin >> choice;
 	switch (choice)
 	{
@@ -70,7 +70,7 @@ template<typename T> void Add_rows(T**& arr, int& rows, int cols)
 		push_rows_back(arr, rows, cols);
 		break;
 	case 3:
-		cout << "Ââåäèòå êóäà âñòâàèòü ñòðîêó: "; cin >> index;
+		cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÑƒÐ´Ð° Ð²ÑÑ‚Ð²Ð°Ð¸Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÑƒ: "; cin >> index;
 		insert_rows(arr, rows, cols, index);
 	}
 }
@@ -108,7 +108,7 @@ template<typename T> void pop_rows_back(T**& arr, int& rows, int cols)
 template<typename T> void erase_rows(T**& arr, int& rows, int cols)
 {
 	int index;
-	cout << "Ââåäèòå êàêóþ ñòðîêó óäàëèòü: "; cin >> index;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ°ÐºÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ: "; cin >> index;
 	rows -= 1;
 	T** buffer = new T * [rows];
 	for (int i = 0; i < rows + 1; i++) {
@@ -129,10 +129,10 @@ template<typename T> void erase_rows(T**& arr, int& rows, int cols)
 template<typename T> void Delete_rows(T**& arr, int& rows, int cols)
 {
 	int choice;
-	cout << "Âûáåðèòå êàêóþ ñòðîêó óäàëèòü." << endl;
-	cout << "1 - ïåðâóþ ñòðîêó"
-		"\n2 - ïîñëåäíþþ ñòðîêó"
-		"\n3 - ïî èíäåêñó" << endl;
+	cout << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ ÐºÐ°ÐºÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ ÑƒÐ´Ð°Ð»Ð¸Ñ‚ÑŒ." << endl;
+	cout << "1 - Ð¿ÐµÑ€Ð²ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ"
+		"\n2 - Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÑŽÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ"
+		"\n3 - Ð¿Ð¾ Ð¸Ð½Ð´ÐµÐºÑÑƒ" << endl;
 	cin >> choice;
 	switch (choice)
 	{
@@ -149,8 +149,8 @@ template<typename T> void Delete_rows(T**& arr, int& rows, int cols)
 
 template<typename T> void work_rows(T**& arr, int& rows, int cols) {
 
-	cout << "1 - Äîáàâëåíèå ñòðîê" << endl;
-	cout << "2 - Óäàëåíèå ñòðîê" << endl;
+	cout << "1 - Ð”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÑ‚Ñ€Ð¾Ðº" << endl;
+	cout << "2 - Ð£Ð´Ð°Ð»ÐµÐ½Ð¸Ðµ ÑÑ‚Ñ€Ð¾Ðº" << endl;
 	int r; cin >> r;
 	switch (r)
 	{

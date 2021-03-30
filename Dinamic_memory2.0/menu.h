@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include "rows_arr.h"
 #include "cols_arr.h"
@@ -6,8 +6,8 @@ using namespace std;
 
 template<typename T> void Menu(T**& arr, int& rows, int& cols) {
 
-	cout << "1 - работа со строками" << endl;
-	cout << "2 - работа с колонками" << endl;
+	cout << "1 - СЂР°Р±РѕС‚Р° СЃРѕ СЃС‚СЂРѕРєР°РјРё" << endl;
+	cout << "2 - СЂР°Р±РѕС‚Р° СЃ РєРѕР»РѕРЅРєР°РјРё" << endl;
 	int choice; cin >> choice;
 	switch (choice)
 	{
